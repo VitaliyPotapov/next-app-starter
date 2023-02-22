@@ -1,38 +1,67 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# next-app-starter
+This is a [Next.js](https://nextjs.org/) app template. It allows to bootstrap new projects with the followings features out-of-box:
+  * Intergation with [takeda/ui](https://github.com/oneTakeda/takeda-exp-components) package
+  * Appropriate code-styling with [Prettier](https://prettier.io/) and [ESLint](https://eslint.org/)
+  * CSS styling with [Tailwind](https://tailwindcss.com/)
+  * Unit testing with [Vitest](https://vitest.dev/)
+  * Authentication with [Azure AAD](https://learn.microsoft.com/en-us/azure/active-directory/develop/msal-overview)
+  * GitHub actions for PR checks and deployment
 
-## Getting Started
+You can check live demo here: `https://tbd`
 
-First, run the development server:
+## Contents
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+<!-- toc -->
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- [Local Development](#local-development)
+- [Branching Model](#branching-model)
+- [PRs and Code Review](#prs-and-code-review)
+- [Unit Testing](#unit-testing)
+- [E2E Testing](#e2e-testing)
+- [Deploy Process](#deploy-process)
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+<!-- tocstop -->
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Local Development
+1. Ensure you have [Node.js](https://nodejs.org/) v16 installed
+   ```
+   node -v
+   ```
+2. Clone repo
+   ```
+   git clone https://github.com/VitaliyPotapov/next-app-starter
+   ```
+3. [Setup private npm registry](https://onetakeda.atlassian.net/wiki/spaces/TWS/pages/3702325393/Setup+.npmrc+for+JFrog+private+registry)
+4. Install dependencies
+   ```
+   npm i
+   ```
+5. Create a `.env.local` file with local environment variables
+   ```
+   tbd
+   ```
+6. Run development server
+   ```
+   npm run dev
+   ```
+7. Open http://localhost:3000
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Branching Model
+This project uses [trunk-based development](https://trunkbaseddevelopment.com/). There are the following branches:
+* `main` - long-lived branch with actual codebase
+* `release/x.x` - release branches for pre-production code-freeze, regression testing and deploy
+* all other branches are short-lived feature branches named as `prj-xxx-new-feature`
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## PRs and Code Review
+* Target your pull-requests to `main` branch
+* Request code review [using GitHub](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/requesting-a-pull-request-review)
+* Get at least 1 approve before merge
 
-## Learn More
+## Unit Testing
+tbd
 
-To learn more about Next.js, take a look at the following resources:
+## E2E Testing
+tbd
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Deploy Process
+tbd
