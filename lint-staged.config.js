@@ -6,7 +6,7 @@ const buildEslintCommand = (filenames) =>
 
 module.exports = {
   // See: https://github.com/okonet/lint-staged#example-run-tsc-on-changes-to-typescript-files-but-do-not-pass-any-filename-arguments
-  '**/*.ts?(x)': () => 'tsc -p tsconfig.json --noEmit',
+  'src/**/*.ts?(x)': () => 'tsc -p tsconfig.json --noEmit',
   '*.{js,jsx,ts,tsx}': [buildEslintCommand, 'prettier --write --ignore-unknown'],
   '!(*.{js,jsx,ts,tsx})': 'prettier --write --ignore-unknown',
 };

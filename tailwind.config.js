@@ -1,6 +1,13 @@
+const defaultConfig = require('@takeda/ui/tailwind/default.config');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./src/**/*.{js,ts,jsx,tsx}'],
+  presets: [defaultConfig],
+  content: [
+    './src/**/*.{js,ts,jsx,tsx}',
+    './node_modules/@takeda/ui/**/*.{html,js,ts,jsx,tsx}',
+    '!./node_modules/@takeda/ui/node_modules',
+  ],
   theme: {
     extend: {},
   },
