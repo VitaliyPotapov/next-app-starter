@@ -1,5 +1,7 @@
 # next-app-starter
 
+[![lint](https://github.com/VitaliyPotapov/next-app-starter/actions/workflows/lint.yaml/badge.svg)](https://github.com/VitaliyPotapov/next-app-starter/actions/workflows/lint.yaml)
+
 This is a [Next.js](https://nextjs.org/) app template. It allows to bootstrap new projects with the followings features out-of-box:
 
 - Intergation with [takeda/ui](https://github.com/oneTakeda/takeda-exp-components) package
