@@ -2,6 +2,8 @@
 
 [![lint](https://github.com/VitaliyPotapov/next-app-starter/actions/workflows/lint.yaml/badge.svg)](https://github.com/VitaliyPotapov/next-app-starter/actions/workflows/lint.yaml)
 [![unit-tests](https://github.com/VitaliyPotapov/next-app-starter/actions/workflows/unit-tests.yaml/badge.svg)](https://github.com/VitaliyPotapov/next-app-starter/actions/workflows/unit-tests.yaml)
+[![react](https://img.shields.io/badge/react-v17-orange)](https://github.com/VitaliyPotapov/next-app-starter/blob/main/package.json)
+[![@takeda/ui](https://img.shields.io/badge/%40takeda%2Fui-v3.4.0-orange)](https://github.com/VitaliyPotapov/next-app-starter/blob/main/package.json)
 
 This is a [Next.js](https://nextjs.org/) app template. It allows to bootstrap new projects with the followings features out-of-box:
 
