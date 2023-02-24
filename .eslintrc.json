@@ -2,6 +2,7 @@
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "next/core-web-vitals",
     "prettier" // Make sure this is the last
   ],
@@ -10,6 +11,12 @@
 
   "rules": {
     "no-console": "error"
+  },
+
+  // required for plugin:@typescript-eslint/recommended-requiring-type-checking
+  // see: https://typescript-eslint.io/linting/typed-linting
+  "parserOptions": {
+    "project": true
   },
 
   "overrides": [

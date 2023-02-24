@@ -1,5 +1,4 @@
 import { DefaultHeader, DefaultFooter } from '@takeda/ui/components/sections';
-import { CloudinaryAsset } from '@takeda/ui/types';
 import { ReactNode } from 'react';
 
 export interface DefaultLayoutProps {
