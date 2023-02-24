@@ -18,7 +18,6 @@ export default function DefaultLayout(props: DefaultLayoutProps) {
       {props.children}
       <DefaultFooter
         annotationPrefix=""
-        // colors="takeda-colors-reverse"
         socialLinks={[
           {
             type: 'Social',

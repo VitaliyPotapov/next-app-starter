@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --textColor: #34373f;
+  --colorPrimary: #e52026;
+  --colorPrimaryContrast: #ffffff;
+  --colorPrimaryActive: #bd120a;
+  --colorPrimaryActiveContrast: #ffffff;
+  --colorSecondary: #ffffff;
+  --colorSecondaryContrast: #34373f;
+  --colorLightGrey: #edf2f4;
+  --colorLightGreyContrast: #34373f;
+  --colorDarkGrey: #34373f;
+  --colorDarkGreyContrast: #ffffff;
+  --colorMediumGrey: #a1a4ac;
+  --colorMediumGreyContrast: #ffffff;
+}
