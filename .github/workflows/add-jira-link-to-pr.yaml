@@ -13,8 +13,8 @@ jobs:
         with:
           result-encoding: string
           script: |
-            const keys = (context.payload.pull_request?.title || '').match(/[A-Z]{3,}-\d+/g) || [];
-            if (!keys.length) return;
+            const keys = (context.payload.pull_request?.title || '').match(/[A-Z]{3,}-\d+/g);
+            if (!keys?.length) return;
             const links = keys.map(key => `* [${key}](https://onetakeda.atlassian.net/browse/${key})`).join('')
             github.rest.issues.createComment({
               issue_number: context.issue.number,
