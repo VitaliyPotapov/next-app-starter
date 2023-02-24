@@ -7,6 +7,10 @@ export default defineConfig({
     include: ['test/specs/**'],
     environment: 'jsdom',
     setupFiles: ['test/setup.ts'],
+    coverage: {
+      all: true,
+      include: ['src/**'],
+    },
   },
   resolve: {
     alias: {
