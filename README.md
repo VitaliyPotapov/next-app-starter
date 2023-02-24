@@ -1,7 +1,6 @@
 # next-app-starter
 
 [![lint](https://github.com/VitaliyPotapov/next-app-starter/actions/workflows/lint.yaml/badge.svg)](https://github.com/VitaliyPotapov/next-app-starter/actions/workflows/lint.yaml)
-
 [![unit-tests](https://github.com/VitaliyPotapov/next-app-starter/actions/workflows/unit-tests.yaml/badge.svg)](https://github.com/VitaliyPotapov/next-app-starter/actions/workflows/unit-tests.yaml)
 
 This is a [Next.js](https://nextjs.org/) app template. It allows to bootstrap new projects with the followings features out-of-box:
