@@ -5,14 +5,14 @@ on:
     types: [opened]
 
 jobs:
-  example_comment_pr:
+  add-comment:
+    permissions: write-all
     runs-on: ubuntu-latest
     steps:
       - uses: actions/github-script@v6
         with:
           result-encoding: string
           script: |
-            console.log(context);
             const keys = (context.payload.pull_request?.title || '').match(/[A-Z]{3,}-\d+/g) || [];
             if (!keys.length) return;
             const links = keys.map(key => `* [${key}](https://onetakeda.atlassian.net/browse/${key})`).join('')
@@ -20,5 +20,5 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: `*Jira links:*${links}`,
+              body: `*Jira links:*\n${links}`,
             });
