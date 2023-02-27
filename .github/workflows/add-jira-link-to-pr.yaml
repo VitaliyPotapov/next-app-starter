@@ -15,10 +15,11 @@ jobs:
           script: |
             const keys = (context.payload.pull_request?.title || '').match(/[A-Z]{3,}-\d+/g);
             if (!keys?.length) return;
-            const links = keys.map(key => `* [${key}](https://onetakeda.atlassian.net/browse/${key})`).join('')
+            const links = keys.map(key => `[${key}](https://onetakeda.atlassian.net/browse/${key})`);
+            const prefix = links.length === 1 ? 'Jira link' : 'Jira links';
             github.rest.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: `**Jira links:**\n${links}`,
+              body: `**${prefix}:** ${links.join(', ')}`,
             });
