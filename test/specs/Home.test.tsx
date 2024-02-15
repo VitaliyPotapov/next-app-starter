@@ -5,5 +5,5 @@ import Home from '@/pages';
 test('home', () => {
   render(<Home />);
 
-  expect(screen.getByText('next app starter')).toBeDefined();
+  expect(screen.getByText('Contract Request')).toBeDefined();
 });

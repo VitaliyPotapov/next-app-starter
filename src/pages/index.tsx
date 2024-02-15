@@ -1,5 +1,6 @@
+import Footer from '@/components/Footer';
+import Table from '@/components/Table';
 import Head from 'next/head';
-import DefaultLayout from '../components/layouts/DefaultLayout';
 
 export default function Home() {
   return (
@@ -10,9 +11,17 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <DefaultLayout>
-        <h1 className="text-3xl">next app starter</h1>
-      </DefaultLayout>
+      <header>
+        <div className="tabs tabs-boxed">
+          <a className="tab tab-active">Contract Request</a>
+          <a className="tab">Purchase Request</a>
+          <a className="tab">Purchase Order</a>
+        </div>
+      </header>
+      <main className="p-4">
+        <Table />
+      </main>
+      <Footer />
     </>
   );
 }

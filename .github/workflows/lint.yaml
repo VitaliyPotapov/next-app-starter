@@ -1,8 +1,9 @@
 name: lint
 
 on:
-  push:
-  workflow_dispatch:
+  # push:
+  # workflow_dispatch:
+  pull_request:
 
 jobs:
   lint:
@@ -15,6 +16,8 @@ jobs:
       - run: npm ci
         env:
           NPM_TOKEN: ${{ secrets.JFROG_NPM_TOKEN }}
+
+      - run: echo '${{ toJSON(github) }}'
 
       - run: npx prettier --check --ignore-unknown .
 
